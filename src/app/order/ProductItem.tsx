@@ -8,11 +8,12 @@ type Props = {
 };
 
 export default function ProductItem({ product }: Props) {
-  const { cartItems, increaseItemCount, decreaseItemCount } = useCartStore();
+  const { cartItems, increaseItemQuantity, decreaseItemQuantity } =
+    useCartStore();
 
-  const count = cartItems.find((item) => item.id === product.id)?.count ?? 0;
-  const onPlusClick = () => increaseItemCount(product.id);
-  const onMinusClick = () => decreaseItemCount(product.id);
+  const count = cartItems.find((item) => item.id === product.id)?.quantity ?? 0;
+  const onPlusClick = () => increaseItemQuantity(product.id);
+  const onMinusClick = () => decreaseItemQuantity(product.id);
 
   const highlightedItem = count > 0;
   const isEvent = product.event === 1;
