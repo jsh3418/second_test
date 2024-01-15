@@ -3,19 +3,20 @@ import { create } from "zustand";
 type CartItem = {
   id: string;
   quantity: number;
+  price: number;
 };
 
 type CartStore = {
   cartItems: CartItem[];
 
-  increaseItemQuantity: (id: string) => void;
+  increaseItemQuantity: (id: string, price: number) => void;
   decreaseItemQuantity: (id: string) => void;
 };
 
 export const useCartStore = create<CartStore>((set) => ({
   cartItems: [],
 
-  increaseItemQuantity: (id) =>
+  increaseItemQuantity: (id, price) =>
     set((state) => {
       const item = state.cartItems.find((item) => item.id === id);
 
@@ -27,7 +28,7 @@ export const useCartStore = create<CartStore>((set) => ({
       }
 
       return {
-        cartItems: [...state.cartItems, { id, quantity: 1 }],
+        cartItems: [...state.cartItems, { id, price, quantity: 1 }],
       };
     }),
 

@@ -12,7 +12,7 @@ export default function ProductItem({ product }: Props) {
     useCartStore();
 
   const count = cartItems.find((item) => item.id === product.id)?.quantity ?? 0;
-  const onPlusClick = () => increaseItemQuantity(product.id);
+  const onPlusClick = () => increaseItemQuantity(product.id, product.price);
   const onMinusClick = () => decreaseItemQuantity(product.id);
 
   const highlightedItem = count > 0;
