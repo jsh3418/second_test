@@ -26,7 +26,9 @@ export default function Order() {
           <ProductItem key={product.id} product={product} />
         ))
       ) : (
-        <div className="text-center">목록을 불러오고 있습니다.</div>
+        <div className="h-full text-center flex items-center justify-center">
+          목록을 불러오고 있습니다.
+        </div>
       )}
     </div>
   );
