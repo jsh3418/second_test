@@ -24,7 +24,7 @@ export default function OrderSummary() {
         <div>{`총 가격 : ${totalPrice.toLocaleString("ko")}원`}</div>
       </div>
 
-      <OrderButton disabled={orderButtonDisabled} isLoading={false} />
+      <OrderButton disabled={orderButtonDisabled} />
     </div>
   );
 }
