@@ -8,7 +8,7 @@ type Props = {
 export default function Layout({ children }: Props) {
   return (
     <div className="w-full h-full flex flex-col items-center">
-      <div className="w-full max-w-mobile h-full relative">
+      <div className="w-full max-w-mobile h-full relative flex flex-col">
         <Header />
         {children}
         <OrderSummary />
