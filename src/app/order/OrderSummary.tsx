@@ -15,6 +15,8 @@ export default function OrderSummary() {
     return acc + item.price * item.quantity;
   }, 0);
 
+  const orderButtonDisabled = totalQuantity === 0;
+
   return (
     <div className="w-full rounded-t-[20px] bg-white relative bottom-0 shadow-[0_-4px_10px_0_#00000040] p-[23px_27px_27px_27px]">
       <div className={`mb-[18px] text-right ${TYPOGRAPHY.NORMAL}`}>
@@ -22,7 +24,7 @@ export default function OrderSummary() {
         <div>{`총 가격 : ${totalPrice.toLocaleString("ko")}원`}</div>
       </div>
 
-      <OrderButton disabled={false} isLoading={false} />
+      <OrderButton disabled={orderButtonDisabled} isLoading={false} />
     </div>
   );
 }
