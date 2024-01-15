@@ -1,5 +1,5 @@
 import { PATH } from "@/constants/path";
-import { useRouter } from "next/router";
+import { useRouter } from "next/navigation";
 import { useState } from "react";
 
 type Props = {
