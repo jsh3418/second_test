@@ -7,6 +7,11 @@ const config: Config = {
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
+    extend: {
+      maxWidth: {
+        mobile: "767px",
+      },
+    },
     colors: {
       black: "#000000",
       white: "#ffffff",
