@@ -25,9 +25,9 @@ export default function OrderButton({ disabled }: Props) {
   return (
     <button
       className={`w-full h-[48px] text-white${
-        disabled ? " bg-argent" : " bg-black"
+        disabled || isLoading ? " bg-argent" : " bg-black"
       }`}
-      disabled={disabled}
+      disabled={disabled || isLoading}
       onClick={fakeOrder}
     >
       {isLoading ? "로딩중..." : "주문하기"}
