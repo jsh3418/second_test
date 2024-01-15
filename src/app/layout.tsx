@@ -18,9 +18,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="ko" className="h-full">
-      <body className={"h-full flex flex-col items-center " + inter.className}>
-        {children}
-      </body>
+      <body className={"h-full " + inter.className}>{children}</body>
     </html>
   );
 }
