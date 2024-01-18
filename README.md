@@ -3,15 +3,23 @@
 ## 설치 및 실행
 
 ```bash
-$ git clone https://github.com/jsh3418/second_test.git
+git clone https://github.com/jsh3418/second_test.git
+```
 
-$ npm i
+```bash
+npm i
+```
 
-$ npm run server
+```bash
+npm run server
+```
 
-$ npm run dev
+```bash
+npm run dev
+```
 
-$ open http://localhost:3000/
+```bash
+open http://localhost:3000/
 ```
 
 ## 트러블 슈팅 및 고민한 부분
