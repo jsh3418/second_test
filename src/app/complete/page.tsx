@@ -13,7 +13,7 @@ export default function Complete() {
     <div
       className={`${TYPOGRAPHY.NORMAL} text-center w-full h-full flex flex-col items-center justify-center gap-[12px]`}
     >
-      <Image src={checkIcon} alt="check" width={48} height={48} />
+      <Image src={checkIcon} alt="check" width={48} height={48} priority />
       <div>주문이 완료되었습니다.</div>
     </div>
   );
