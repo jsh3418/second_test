@@ -13,28 +13,32 @@ type CartStore = {
   decreaseItemQuantity: (id: string) => void;
 };
 
+const MAX_QUANTITY = 999;
+
 export const useCartStore = create<CartStore>((set) => ({
   cartItems: [],
 
   increaseItemQuantity: (id, price) =>
     set((state) => {
-      const item = state.cartItems.find((item) => item.id === id);
+      const { cartItems } = state;
+      const item = cartItems.find((item) => item.id === id);
 
       if (item) {
-        if (item.quantity < 9) {
+        if (item.quantity < MAX_QUANTITY) {
           item.quantity += 1;
         }
-        return { cartItems: [...state.cartItems] };
+        return { cartItems: [...cartItems] };
       }
 
       return {
-        cartItems: [...state.cartItems, { id, price, quantity: 1 }],
+        cartItems: [...cartItems, { id, price, quantity: 1 }],
       };
     }),
 
   decreaseItemQuantity: (id) =>
     set((state) => {
-      const item = state.cartItems.find((item) => item.id === id);
+      const { cartItems } = state;
+      const item = cartItems.find((item) => item.id === id);
 
       if (!item) return state;
 
@@ -42,10 +46,10 @@ export const useCartStore = create<CartStore>((set) => ({
 
       if (item.quantity === 0) {
         return {
-          cartItems: state.cartItems.filter((item) => item.id !== id),
+          cartItems: cartItems.filter((item) => item.id !== id),
         };
       }
 
-      return { cartItems: [...state.cartItems] };
+      return { cartItems: [...cartItems] };
     }),
 }));
