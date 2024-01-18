@@ -11,6 +11,7 @@ type CartStore = {
 
   increaseItemQuantity: (id: string, price: number) => void;
   decreaseItemQuantity: (id: string) => void;
+  resetCart: () => void;
 };
 
 const MAX_QUANTITY = 999;
@@ -52,4 +53,6 @@ export const useCartStore = create<CartStore>((set) => ({
 
       return { cartItems: [...cartItems] };
     }),
+
+  resetCart: () => set({ cartItems: [] }),
 }));
