@@ -22,7 +22,7 @@ export default function Order() {
   return (
     <div className="p-[18px_24px_18px_25px] flex flex-col gap-[18px] overflow-scroll grow">
       {!isLoading ? (
-        products?.map((product) => (
+        products.map((product) => (
           <ProductItem key={product.id} product={product} />
         ))
       ) : (
