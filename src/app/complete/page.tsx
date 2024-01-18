@@ -7,7 +7,7 @@ import Image from "next/image";
 import checkIcon from "/public/checkFilled.svg";
 
 export default function Complete() {
-  useDelayRedirect(PATH.HOME, 3000);
+  const remainingTime = useDelayRedirect(PATH.HOME, 3000);
 
   return (
     <div
@@ -15,6 +15,7 @@ export default function Complete() {
     >
       <Image src={checkIcon} alt="check" width={48} height={48} priority />
       <div>주문이 완료되었습니다.</div>
+      <div>{`${remainingTime}초 후 홈으로 이동합니다.`}</div>
     </div>
   );
 }
