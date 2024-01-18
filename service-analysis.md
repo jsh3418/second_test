@@ -9,6 +9,7 @@
 - 환경: 모바일
 - 현상: 셀렉트를 하나 이상 열 수 있어 overlap 되는 현상 발생
 - 영상
+
 https://github.com/jsh3418/second_test/assets/57666791/cf52f34c-38b3-4586-ae8d-a1c5652e1332
 
 - 해결 방법: 셀렉트가 열림 상태를 공유하여 하나만 열리도록 수정해볼 수 있을 것 같습니다.
@@ -33,6 +34,8 @@ https://github.com/jsh3418/second_test/assets/57666791/db0e5392-85fb-4541-950a-f
 
 - 환경: 모바일
 - 현상: 지도페이지 분류 미동작
+- 스크린샷
+  
 https://github.com/jsh3418/second_test/assets/57666791/f615dd97-9d6f-4f25-8ad9-c4a76e0ee02c
 
 - 해결 방법: 코드를 확인해서 동작하지 않는 이유를 분석 후 해결해야 합니다.
