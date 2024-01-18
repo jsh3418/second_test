@@ -1,6 +1,6 @@
 "use client";
 
-import { fetcher } from "@/apis/fetcher";
+import { getProducts } from "@/apis/product";
 import { Product } from "@/types/product";
 import { useEffect, useState } from "react";
 import ProductItem from "./ProductItem";
@@ -12,7 +12,7 @@ export default function Order() {
   useEffect(() => {
     setIsLoading(true);
     (async () => {
-      const data = await fetcher.get("http://localhost:3001/items");
+      const data = await getProducts();
 
       setProducts(data);
       setIsLoading(false);
