@@ -5,7 +5,7 @@ import { TYPOGRAPHY } from "@/constants/typography";
 import useDelayRedirect from "@/hooks/useDelayRedirect";
 
 export default function Complete() {
-  useDelayRedirect(PATH.HOME, 3000);
+  const remainingTime = useDelayRedirect(PATH.HOME, 3000);
 
   return (
     <div
@@ -13,6 +13,7 @@ export default function Complete() {
     >
       <div>주문에 실패하였습니다.</div>
       <div>다시 시도해주세요.</div>
+      <div>{`${remainingTime}초 후 홈으로 이동합니다.`}</div>
     </div>
   );
 }
