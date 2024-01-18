@@ -5,7 +5,7 @@ import OrderButton from "./OrderButton";
 import { useCartStore } from "./useCartStore";
 
 export default function OrderSummary() {
-  const { cartItems } = useCartStore();
+  const cartItems = useCartStore(({ cartItems }) => cartItems);
 
   const totalQuantity = cartItems.reduce((acc, item) => {
     return acc + item.quantity;
