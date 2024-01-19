@@ -1,37 +1,39 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# second_test
 
-## Getting Started
+## 설치 및 실행
 
-First, run the development server:
+```bash
+git clone https://github.com/jsh3418/second_test.git
+```
+
+```bash
+npm i
+```
+
+```bash
+npm run server
+```
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+```bash
+open http://localhost:3000/
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 트러블 슈팅 및 고민한 부분
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+- nextjs Image 컴포넌트의 경고 메시지([이슈](https://github.com/jsh3418/second_test/issues/5), [PR](https://github.com/jsh3418/second_test/pull/6))
+- complete, error 페이지에 남은 시간을 표시하여 사용자 경험 향상시키기([이슈](https://github.com/jsh3418/second_test/issues/7), [PR](https://github.com/jsh3418/second_test/pull/8))
+- 코드를 작성하면서 고민하고 신경써서 작성한 코드를 코멘트로 남겼습니다. ([PR](https://github.com/jsh3418/second_test/pull/12))
 
-## Learn More
+## 시연 영상
 
-To learn more about Next.js, take a look at the following resources:
+- PC
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+https://github.com/jsh3418/second_test/assets/57666791/56d58cfb-a566-4bdd-bc89-407a473c5953
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+- 모바일
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
-# second_test
+https://github.com/jsh3418/second_test/assets/57666791/03666b02-bec0-4163-8faa-8e2aa3170d77
