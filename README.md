@@ -26,6 +26,7 @@ open http://localhost:3000/
 
 - nextjs Image 컴포넌트의 경고 메시지([이슈](https://github.com/jsh3418/second_test/issues/5), [PR](https://github.com/jsh3418/second_test/pull/6))
 - complete, error 페이지에 남은 시간을 표시하여 사용자 경험 향상시키기([이슈](https://github.com/jsh3418/second_test/issues/7), [PR](https://github.com/jsh3418/second_test/pull/8))
+- 코드를 작성하면서 고민하고 신경써서 작성한 코드를 코멘트로 남겼습니다. ([PR](https://github.com/jsh3418/second_test/pull/12))
 
 ## 시연 영상
 
